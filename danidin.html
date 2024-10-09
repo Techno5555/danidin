@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head >
+<head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danidin</title>
     <style>
-       /* .flex {
+        /* .flex {
             display: flex;
             flex-direction: row;
             background-color: darkgreen;
@@ -16,7 +17,7 @@
             top:0;
             z-index:100;
         }*/
-        
+
         .small-conetnt {
             color: black;
             text-align: center;
@@ -26,13 +27,16 @@
             cursor: pointer;
             font-weight: bold;
         }
-        .small-conetnt:hover{
-            color: darkblue;
-        }
-        .magnifying-glass{
-            width:300px;
+
+            .small-conetnt:hover {
+                color: darkblue;
+            }
+
+        .magnifying-glass {
+            width: 300px;
             border-radius: 30px;
         }
+
         .contribution {
             color: white;
             font-size: 20px;
@@ -48,28 +52,31 @@
             text-align: end;
             transition: color 0.2s,background 0.3s;
         }
-        .button-on-contribution{
+
+        .button-on-contribution {
             margin-top: 5px;
             opacity: 0;
             background-color: greenyellow;
             transition: opacity 0.3s;
-
         }
-        .contribution:hover{
+
+        .contribution:hover {
             color: limegreen;
             background-color: white;
-            
         }
-        .contribution:hover + .button-on-contribution {
-            opacity: 1;
-        }
+
+            .contribution:hover + .button-on-contribution {
+                opacity: 1;
+            }
+
         .Join-text {
             margin-top: 80px;
             text-align: center;
             color: lightblue;
-            text-shadow: 2px 0 , -2px 0 blue, 0 2px blue, 0 -2px blue, 1px 1px blue, -1px -1px blue, 1px -1px blue, -1px 1px blue;
+            text-shadow: 2px 0, -2px 0 blue, 0 2px blue, 0 -2px blue, 1px 1px blue, -1px -1px blue, 1px -1px blue, -1px 1px blue;
             font-size: 40px;
         }
+
         .join-button {
             display: inline-block;
             padding: 20px 40px;
@@ -84,9 +91,11 @@
             border-radius: 20px;
             text-decoration: underline;
         }
-        .join-button:hover {
-            background-color: #0056b3;
-         }
+
+            .join-button:hover {
+                background-color: #0056b3;
+            }
+
         .field {
             margin-top: 40px;
             text-align: center;
@@ -95,6 +104,7 @@
             font-size: 40px;
             margin-bottom: 10px;
         }
+
         .achievements {
             width: 100%;
             display: flex;
@@ -106,6 +116,7 @@
             margin: 120px 0;
             position: relative;
         }
+
             .achievements::after {
                 content: ''; /* נדרש עבור ::after */
                 position: absolute; /* תורם למקם אותו בדיוק בתוך האלמנט הראשי */
@@ -121,12 +132,13 @@
                 opacity: 0.1; /* שקיפות של התמונה */
                 z-index: 1; /* מוודא שהתמונה מעל צבע הרקע */
             }
+
         .text-achive {
             font-weight: bold;
             text-align: center;
-            
             white-space: pre;
         }
+
         .file-buttom {
             display: inline-block;
             padding: 20px;
@@ -141,33 +153,28 @@
             border: none;
         }
 
-        .file-buttom:hover {
-            background-color: darkgreen;
-        }
-        #fileInput{
+            .file-buttom:hover {
+                background-color: darkgreen;
+            }
+
+        #fileInput {
             display: none;
         }
+
         .image-prize {
             width: 600px;
             border-radius: 8px;
         }
 
 
-        .grid {
-            display: grid; 
-            grid-template-columns: 1fr 1fr;
-            column-gap: 40px;
-            row-gap: 70px;
-            margin: 40px 40px;
-        }
+
         .object-group {
             display: none;
             margin-top: 20px;
-            
         }
 
         .button-question {
-            padding: 10px 40%;
+            padding: 10px 40px;
             background-color: #007bff;
             color: white;
             border: none;
@@ -178,40 +185,42 @@
             white-space: pre;
         }
 
-        .button-question:hover {
-            background-color: #0056b3;
-        }
+            .button-question:hover {
+                background-color: #0056b3;
+            }
 
-        img{
+        img {
             width: 20px;
             height: auto;
             transition: transform 0.5s ease; /* הגדרת זמן מעבר חלק */
         }
-        .text-question{
-            white-space:pre;
-            text-align: end;
+
+        .text-question {
+            white-space: pre;
+            text-align: center;
             font-size: 25px;
             margin: 0;
             background-color: lightpink;
-            
-            
         }
         /* מחלקה שגורמת לתמונה להסתובב ב-180 מעלות */
         .rotated {
             transform: rotate(180deg);
         }
-        .header-quesion{
-            margin-top:120px;
+
+        .header-quesion {
+            margin-top: 120px;
             text-align: center;
-            color:lightsalmon;
+            color: lightsalmon;
             font-weight: bold;
             font-size: 40px;
         }
+
         .changed {
             color: blue;
         }
+
         #imagePreview {
-          /* max-width: 100%;
+            /* max-width: 100%;
             max-height: 4000px; /* או כל גובה שמתאים לך */
             width: 150px;
             display: block;
