@@ -54,7 +54,18 @@ button {
         display: none;
     }
 }
-
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 70px;
+    margin: 40px 40px;
+}
+@media(max-width: 1000px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
 .magnifying-glass {
     width: 300px;
     border-radius: 30px;
@@ -129,3 +140,4 @@ button {
     flex-direction: column;
     place-items: center;
 }
+
