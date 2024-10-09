@@ -1,4 +1,4 @@
-﻿body {
+body {
     background-color: #FFE55F;
     margin: 0;
     
@@ -48,6 +48,11 @@ button {
     color: whitesmoke;
     text-shadow: 2px 0 red, -2px 0 red, 0 2px red, 0 -2px red, 1px 1px red, -1px -1px red, 1px -1px red, -1px 1px red;
     text-align: center;
+} 
+@media(max-width: 1000px){
+    .small-so-none {
+        display: none;
+    }
 }
 
 .magnifying-glass {
