@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>Danidin</title>
     <style>
+
         .small-conetnt {
             color: black;
             text-align: center;
@@ -164,15 +165,19 @@
         .button-question {
             padding: 10px 40px;
             background-color: #007bff;
-            color: white; /* white */
+            color: white;
             border: none;
             cursor: pointer;
-            font-size: 25px;
+            font-size: 20px;
             border-radius: 5px;
             margin-bottom: 20px;
             white-space: pre;
         }
-
+        @media(max-width: 1000px) {
+            .button-question {
+                font-size: 25px;
+            }
+        }
             .button-question:hover {
                 background-color: #0056b3;
             }
