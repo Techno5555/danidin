@@ -3,6 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danidin</title>
     <style>
         /* .flex {
@@ -21,7 +22,7 @@
             color: black;
             text-align: center;
             text-decoration: underline;
-            font-size: 20px;
+            font-size: 22px;
             margin: 30px;
             cursor: pointer;
             font-weight: bold;
@@ -102,6 +103,7 @@
             z-index: 100;
             font-size: 40px;
             margin-bottom: 10px;
+          
         }
 
         .achievements {
@@ -178,7 +180,7 @@
             color: white;
             border: none;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 20px;
             border-radius: 5px;
             margin-bottom: 20px;
             white-space: pre;
@@ -241,7 +243,7 @@
         </div>
         <div style="flex:1">
             <div style="margin-top: 50px;"></div>
-            <p data-target="surface" data-change-from="0" data-change-to="420" class="small-conetnt">מהניסיון בשטח</p>
+            <p data-target="surface" data-change-from="0" data-change-to="420" class="small-conetnt">מהניסיו<span style="text-decoration: none">ן</span> בשטח</p>
             <p data-target="achivement" data-change-from="421" data-change-to="1080" class="small-conetnt">הישגים אחרונים</p>
             <p data-target="join" data-change-from="1081" data-change-to="1400" class="small-conetnt">הצטרפות</p>
             <p data-target="question" data-change-from="1401" data-change-to="5000" class="small-conetnt">שאלות</p>
@@ -334,9 +336,7 @@
         <div>
             <!--option 3-->
             <div style="display: grid; grid-template-columns: 1fr 20px;background-color: lightpink;">
-                <button class="button-question" data-target="question3" onclick="toggleObjects(this)">
-                    ?מה מטרת המיזם
-                </button>
+                <button class="button-question" data-target="question3" onclick="toggleObjects(this)">?מה מטרת המיזם</button>
                 <img class="question3" src="https://www.svgrepo.com/show/80156/down-arrow.svg" alt="תמונה של קבוצה 1">
             </div>
             <div class="object-group question3" style="margin:0">
@@ -353,10 +353,7 @@
         <div>
             <!--option 4-->
             <div style="display: grid; grid-template-columns: 1fr 20px;background-color: lightpink;">
-                <button class="button-question" data-target="question4" onclick="toggleObjects(this)">
-                    ?מה להביא לו?, ומה בכלל להגיד
-                    ?למה לא אומרים כלום
-                </button>
+                <button class="button-question" data-target="question4" onclick="toggleObjects(this)">?מה להביא לו?, ומה בכלל להגיד? למה לא אומרים כלום</button>
                 <img class="question4" src="https://www.svgrepo.com/show/80156/down-arrow.svg" alt="תמונה של קבוצה 1">
             </div>
             <div class="object-group question4" style="margin:0">
@@ -374,10 +371,7 @@
         <div>
             <!--option 5-->
             <div style="display: grid; grid-template-columns: 1fr 20px;background-color: lightpink;">
-                <button class="button-question" data-target="question5" onclick="toggleObjects(this)">
-                    מה אני עושה אם אני לא מביא אוכל
-                    ?ועדיין רוצה להשתתף
-                </button>
+                <button class="button-question" data-target="question5" onclick="toggleObjects(this)">?מה אני עושה אם אני לא מביא אוכל ועדיין רוצה להשתתף</button>
                 <img class="question5" src="https://www.svgrepo.com/show/80156/down-arrow.svg" alt="תמונה של קבוצה 1">
             </div>
             <div class="object-group question5" style="margin:0">
@@ -394,9 +388,7 @@
         <div>
             <!--option 6-->
             <div style="display: grid; grid-template-columns: 1fr 20px;background-color: lightpink;">
-                <button class="button-question" data-target="question6" onclick="toggleObjects(this)">
-                    ?למה בכלל להביא אוכל
-                </button>
+                <button class="button-question" data-target="question6" onclick="toggleObjects(this)">?למה בכלל להביא אוכל</button>
                 <img class="question6" src="https://www.svgrepo.com/show/80156/down-arrow.svg" alt="תמונה של קבוצה 1">
             </div>
             <div class="object-group question6" style="margin:0">
