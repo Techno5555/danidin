@@ -1,4 +1,11 @@
 // JavaScript source code
+function sendMessage() {
+    let message = "׳©׳׳•׳ ׳¢׳•׳׳";
+    // Use the correct international format for WhatsApp
+    let phoneNumber = "972534378742";
+    let url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+    window.open(url, '_blank');
+}
 function displayImage() {
     const fileInput = document.getElementById('fileInput');
     const imagePreview = document.getElementById('imagePreview');
@@ -77,25 +84,23 @@ function removeImage() {
 
 
 
-
-
-
 function toggleObjects(button) {
-    // קבל את שם הקבוצה מהכפתור
+    // Get the target group name from the button's data-target attribute
     const targetGroup = button.getAttribute('data-target');
 
-    // קבל את הטקסט ששייך לאותה קבוצה והצג אותו
+    // Toggle the answer block (object-group)
     const textElement = document.querySelector(`.object-group.${targetGroup}`);
-    if (textElement.style.display === 'none' || textElement.style.display === '') {
-        textElement.style.display = 'block';  // הצג את הטקסט
-    } else {
-        textElement.style.display = 'none';  // הסתר את הטקסט
+    if (textElement) {
+        textElement.style.display = (textElement.style.display === 'block') ? 'none' : 'block';
     }
 
-    // קבל את התמונה באותה קבוצה וסובב אותה
-    const image = document.querySelector(`img.${targetGroup}`);
-    if (image) {
-        image.classList.toggle('rotated');  // סובב את התמונה
+    // Toggle the arrow image (only the one next to the button)
+    const parent = button.parentElement;
+    if (parent) {
+        const image = parent.querySelector(`img.${targetGroup}`);
+        if (image) {
+            image.classList.toggle('rotated');
+        }
     }
 }
 
@@ -125,13 +130,14 @@ document.querySelectorAll('.small-conetnt').forEach(function (element) {
         // Get the target section ID
         const targetId = this.getAttribute('data-target');
         const targetElement = document.getElementById(targetId);
-        const offset = -300; // Adjust this offset value as needed
+        const offset = -340; // Adjust this offset value as needed
         const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY + offset;
 
         // Scroll to the calculated position
         fastSmoothScroll(targetPosition, 300);
     });
 });
+
 
 window.addEventListener('scroll', function () {
     const scrollPosition = window.scrollY;
@@ -160,6 +166,8 @@ function placeConnection()
     const greenObject = document.getElementById('background-disappear');
     greenObject.style.right = "50%";
 }
+
+
 
 
 
