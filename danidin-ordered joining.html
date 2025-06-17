@@ -1,47 +1,194 @@
 <!DOCTYPE html>
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <title>Danidin-ordered joining</title>
     <link rel="webstore icon" type="png" href="danidin-logo.png" />
     <style>
-        p {
-            font-family: Arial;
-            color: darkgreen;
+        body {
+            background: linear-gradient(135deg, #0d2a18 0%, #14532d 100%);
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+          
+            color: #ffe55f;
+            animation: fadeInBody 1.2s;
         }
 
-        button {
-            cursor: pointer;
+        @keyframes fadeInBody {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        header.flex {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(90deg, #14532d 60%, #bfae2e 100%);
+            box-shadow: 0 2px 16px rgba(20,83,45,0.18);
+            padding: 0px 0 10px 0;
+            border-bottom: 4px solid #ffd600;
+            animation: slideDown 1s;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-60px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .name {
+            font-family: 'Varela Round', Arial, sans-serif;
+            letter-spacing: 2px;
+            color: #ffe55f;
+            text-shadow: 2px 2px 8px #14532d, 0 0 2px #ffd600;
+            transition: color 0.3s;
+        }
+
+        .magnifying-glass {
+            width: 120px;
+            border-radius: 30px;
+            box-shadow: 0 4px 16px rgba(20,83,45,0.18);
+            border: 3px solid #ffd600;
+            background: #ffe55f;
+            animation: popIn 1.2s;
+        }
+
+        @keyframes popIn {
+            0% {
+                transform: scale(0.7);
+                opacity: 0;
+            }
+
+            80% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
 
         .second-header {
             text-align: center;
-            font-family: cursive;
+            font-family: 'Varela Round', Arial, sans-serif;
+            color: #ffe55f;
+            margin: 0 0 18px 0;
+            text-shadow: 1px 1px 0 #14532d;
+        }
+
+        .main-content {
+            margin: 80px auto 0 auto;
+            max-width: 600px;
+            background: rgba(13, 42, 24, 0.97);
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(20,83,45,0.28);
+            padding: 40px 24px 32px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .link-whatapp {
-            font-size: 30px;
-            margin: 20px;
+            font-size: 28px;
+            margin: 20px 0 10px 0;
+            color: #25d366;
+            background: linear-gradient(90deg, #14532d 60%, #bfae2e 100%);
+            padding: 12px 32px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(255,214,0,0.10);
+            transition: background 0.3s, color 0.2s, transform 0.2s;
+            display: inline-block;
         }
 
             .link-whatapp:hover {
-                color: blue;
+                background: linear-gradient(90deg, #25d366 60%, #ffd600 100%);
+                color: #14532d;
+                transform: scale(1.08);
             }
 
         .QR-image {
             width: 200px;
+            border-radius: 12px;
+            margin-top: 10px;
+            box-shadow: 0 2px 8px rgba(20,83,45,0.10);
+            border: 2px solid #ffd600;
+            background: #ffe55f;
+        }
+
+        .footer {
+            flex-shrink: 0;
+            width: 100%;
+            min-height: 120px;
+            background: linear-gradient(90deg, #0d2a18 60%, #bfae2e 100%);
+            margin-top: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            direction: rtl;
+            color: #ffe55f;
+            font-size: 22px;
+            box-shadow: 0 -2px 8px rgba(20,83,45,0.18);
+        }
+        @media (max-width: 1000px) {
+            header.flex > div[style*="min-width"] {
+                min-width: 0 !important;
+            }
+
+            .magnifying-glass {
+                width: 120px !important;
+                min-width: 40px !important;
+                max-width: 150px !important;
+                display: block !important;
+            }
+
+            .small-so-none {
+                min-width: 0 !important;
+                flex: 1 !important;
+                display: block !important;
+            }
+            /* Optionally, reduce font size for .name to fit better */
+            .name {
+                font-size: 50px !important;
+                margin-left: 10px !important;
+                margin-right: 10px !important;
+            }
+        }
+        @media (max-width: 800px) {
+            .main-content {
+                padding: 18px 4vw 18px 4vw;
+            }
+
+            .name {
+                font-size: 32px !important;
+            }
+
+            .QR-image {
+                width: 120px;
+            }
         }
     </style>
 </head>
-<body >
+<body>
     <link rel="stylesheet" href="styleHeader.css" />
     <header class="flex">
         <div class="relative" style="flex: 1;">
-            <a href="danidin.html">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Point_cloud_torus.gif/220px-Point_cloud_torus.gif" />
+            <a href="danidin-free style.html">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Point_cloud_torus.gif/220px-Point_cloud_torus.gif" style="width: 60px; background: linear-gradient(90deg, #14532d 60%, #bfae2e 100%); border-radius: 12px;" />
             </a>
-            <div>HOME</div>
+            <div style="color:#ffe55f; font-weight:bold; margin-top:8px;">סגנון חופשי</div>
         </div>
         <div style="flex: 6; min-width: 450px;">
             <p class="name" style="margin-left: 240px;font-size:70px;margin-bottom:10px;">דנידין</p>
@@ -53,17 +200,17 @@
             </a>
         </div>
     </header>
-    <div style="margin: 330px 0 10px;"></div>
-    <p class="second-header" style="font-size: 40px;font-weight: bold;">הצטרפות מסודרת, מעולה</p>
-    <p class="second-header" style="font-size: 30px;">כל כך טוב שהחלטת להצטרף למיזם בצורה שכל כמה שבועות תקבל הודעה ותדע שהגיע תורך</p>
-    <p class="second-header" style="font-size: 30px;">כדי שבאמת יהיה לך קל להצטרף, כל מה שאתה צריך זה להצטרף לקבוצת וואצאפ, וזהו, אתה איתנו</p>
-    <div class="flex-join">
-        <a class="link-whatapp" href="https://chat.whatsapp.com/FAGmzqJOW0cASGCIVV3SEZ" target="_blank">או דרך קישור</a>
-        <p style="font-size: 25px;margin: 30px 0 10px;color:black"> <span style="color: #FFFFFF">QR</span> או  </p>
-        <img class="QR-image" src="QR-danidin.png" />
+    <div style="margin-bottom: 400px;"></div>
+    <div class="main-content">
+        <p class="second-header" style="font-size: 40px;font-weight: bold;">הצטרפות מסודרת</p>
+        <p class="second-header" style="font-size: 30px;">כל כך טוב שהחלטת להצטרף למיזם בצורה שכל כמה שבועות תקבל הודעה ותדע שהגיע תורך</p>
+        <p class="second-header" style="font-size: 30px;">כדי שבאמת יהיה לך קל להצטרף, כל מה שאתה צריך זה להצטרף לקבוצת וואצאפ, וזהו, אתה איתנו</p>
+        <a class="link-whatapp" href="https://chat.whatsapp.com/FAGmzqJOW0cASGCIVV3SEZ" target="_blank">הצטרפות לקבוצה בוואטסאפ</a>
+        <p style="font-size: 25px;margin: 30px 0 10px;color:#ffe55f">או שתסרוק <span style="color: #ffd600"></span></p>
+        <img class="QR-image" src="QR-danidin.png" alt="QR קוד להצטרפות" />
     </div>
-    <div style="width: 100%; height: 200px;background-color:darkgreen;margin-top: 80px;display: flex; justify-content: center;align-items:center;direction:rtl">
-        <p style="font-size: 30px;margin:0 10px; color: whitesmoke">
+    <div class="footer">
+        <p>
             אם אתם רוצים להציע הצעות, רעיונות,
             או סתם דברים שתפסו לכם את העין אתם יכולים לפנות
             למספר 053-437-8742 או למספר 052-349-8002
