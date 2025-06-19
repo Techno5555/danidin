@@ -1,6 +1,6 @@
 // JavaScript source code
 function sendMessage() {
-    let message = "שלום עולם";
+    let message = "יש לי חוויה לספר לך";
     // Use the correct international format for WhatsApp
     let phoneNumber = "972534378742";
     let url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
